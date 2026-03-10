@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Erica | Advocacia Trabalhista, Consumidor e Responsabilidade Civil | MG</title>
+  <meta name="description" content="Dra. Erica — Advogada especializada em reclamações trabalhistas, direito do consumidor e responsabilidade civil em todo o Estado de Minas Gerais. Atendimento presencial e online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --terra: #A0522D;
+      --terra-dark: #6B3A1F;
+      --terra-deep: #3D1F0E;
+      --terra-light: #C4764A;
+      --terra-glow: #D4926A;
+      --accent: #1A5C5A;
+      --accent-light: #237A77;
+      --cream: #FDFAF6;
+      --cream-alt: #F5EFE6;
+      --warm-white: #FFF8F2;
+      --text: #2B1810;
+      --text-muted: #6B5B50;
+      --border: #E0D5C8;
+      --gold: #B8860B;
+      --gold-light: #D4A843;
+      --font-display: 'Fraunces', serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ═══════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .nav.scrolled {
+      background: rgba(253,250,246,0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+      padding: 0.75rem 2rem;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--terra-dark);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links a:hover { color: var(--terra); }
+
+    .nav-cta {
+      background: var(--terra) !important;
+      color: white !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 100px;
+      font-weight: 600 !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--terra-dark) !important;
+      transform: translateY(-1px);
+    }
+
+    .nav-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .nav-mobile-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--terra-dark);
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(160,82,45,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(26,92,90,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(160,82,45,0.03) 0%, transparent 70%),
+        var(--cream);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(160,82,45,0.08);
+      border: 1px solid rgba(160,82,45,0.15);
+      padding: 0.5rem 1.25rem;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--terra);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.1s backwards;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+      max-width: 850px;
+    }
+
+    .hero h1 em {
+      color: var(--terra);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeInUp 0.8s ease-out 0.5s backwards;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--terra);
+      color: white;
+      padding: 1.1rem 2.2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(160,82,45,0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--terra-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(160,82,45,0.4);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background: #1fb855;
+      box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: var(--terra);
+      padding: 1.1rem 2.2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid var(--terra);
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--terra);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .hero-trust {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 4rem;
+      animation: fadeInUp 0.8s ease-out 0.7s backwards;
+    }
+
+    .trust-item {
+      text-align: center;
+    }
+
+    .trust-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--terra);
+      line-height: 1;
+    }
+
+    .trust-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 0.4rem;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-indicator svg { width: 20px; height: 20px; }
+
+    /* ═══════════════════════════════════════════
+       SHARED
+    ═══════════════════════════════════════════ */
+    section { padding: 6rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--terra);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.15;
+    }
+
+    .section-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       AREAS DE ATUAÇÃO
+    ═══════════════════════════════════════════ */
+    .areas { background: var(--cream-alt); }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .area-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .area-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--area-color, var(--terra));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .area-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+    }
+
+    .area-card:hover::after { opacity: 1; }
+
+    .area-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      background: var(--area-bg, rgba(160,82,45,0.08));
+    }
+
+    .area-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .area-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .area-card ul {
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+    }
+
+    .area-card ul li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .area-card ul li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--area-color, var(--terra));
+      flex-shrink: 0;
+    }
+
+    .area-1 { --area-color: #A0522D; --area-bg: rgba(160,82,45,0.08); }
+    .area-2 { --area-color: #1A5C5A; --area-bg: rgba(26,92,90,0.08); }
+    .area-3 { --area-color: #B8860B; --area-bg: rgba(184,134,11,0.08); }
+    .area-4 { --area-color: #6B3A1F; --area-bg: rgba(107,58,31,0.08); }
+
+    /* ═══════════════════════════════════════════
+       DIFERENCIAIS
+    ═══════════════════════════════════════════ */
+    .differentials { background: var(--cream); }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .diff-card {
+      background: var(--cream-alt);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .diff-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--terra);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .diff-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    }
+
+    .diff-card:hover::before { opacity: 1; }
+
+    .diff-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .diff-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .diff-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════
+       STATS BANNER
+    ═══════════════════════════════════════════ */
+    .stats-banner {
+      background: linear-gradient(135deg, var(--terra) 0%, var(--terra-dark) 100%);
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .stats-banner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      margin-bottom: 3rem;
+      font-weight: 500;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.3;
+    }
+
+    .banner-stats {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+      flex-wrap: wrap;
+    }
+
+    .banner-stat { text-align: center; }
+
+    .banner-stat-number {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+    }
+
+    .banner-stat-label {
+      font-size: 0.85rem;
+      opacity: 0.85;
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    /* ═══════════════════════════════════════════
+       ABOUT / QUEM SOU
+    ═══════════════════════════════════════════ */
+    .about { background: var(--cream-alt); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .about-photo-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .about-photo-placeholder {
+      width: 280px;
+      height: 340px;
+      border-radius: 20px;
+      background: linear-gradient(145deg, var(--terra-light), var(--terra));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-photo-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+
+    .about-photo-placeholder svg {
+      width: 80px;
+      height: 80px;
+      opacity: 0.3;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      width: 100%;
+    }
+
+    .credential {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .credential:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+
+    .credential-icon {
+      margin-bottom: 0.3rem;
+    }
+
+    .credential strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .credential span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .quote-box {
+      background: var(--cream);
+      border-left: 4px solid var(--terra);
+      padding: 2rem;
+      border-radius: 0 12px 12px 0;
+      margin-top: 2rem;
+    }
+
+    .quote-box p {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    /* ═══════════════════════════════════════════
+       COMO FUNCIONA
+    ═══════════════════════════════════════════ */
+    .process { background: var(--cream); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--terra);
+      color: white;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .step h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .step::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      right: -0.75rem;
+      width: calc(100% - 56px);
+      height: 2px;
+      background: var(--border);
+      transform: translateX(50%);
+    }
+
+    .step:last-child::after { display: none; }
+
+    /* ═══════════════════════════════════════════
+       ATENDIMENTO / COBERTURA
+    ═══════════════════════════════════════════ */
+    .coverage {
+      background: var(--terra-deep);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coverage::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 0% 100%, rgba(160,82,45,0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 100% 0%, rgba(26,92,90,0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .coverage .section-label { color: var(--terra-glow); }
+    .coverage .section-title { color: var(--cream); }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .coverage-text p {
+      font-size: 1.05rem;
+      opacity: 0.85;
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .coverage-features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .coverage-features li {
+      padding: 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      transition: all 0.3s ease;
+    }
+
+    .coverage-features li:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateX(4px);
+    }
+
+    .coverage-features .check {
+      color: var(--terra-glow);
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       FAQ
+    ═══════════════════════════════════════════ */
+    .faq { background: var(--cream-alt); }
+
+    .faq-list {
+      max-width: 750px;
+      margin: 3rem auto 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 0;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover { color: var(--terra); }
+
+    .faq-question .faq-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════
+       CTA
+    ═══════════════════════════════════════════ */
+    .cta-section {
+      background: var(--cream);
+      text-align: center;
+      padding: 7rem 2rem;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-section h2 em { color: var(--terra); font-weight: 500; }
+
+    .cta-section > p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-info {
+      margin-top: 2rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .cta-info a {
+      color: var(--terra);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════
+       WHATSAPP FLOAT
+    ═══════════════════════════════════════════ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+    }
+
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    footer {
+      background: var(--terra-deep);
+      color: var(--cream);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    footer p { opacity: 0.5; font-size: 0.85rem; }
+
+    .footer-oab {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      opacity: 0.4;
+    }
+
+    /* ═══════════════════════════════════════════
+       ANIMATIONS
+    ═══════════════════════════════════════════ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        padding: 1.5rem 2rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        gap: 1rem;
+      }
+      .areas-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+      .diff-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .coverage-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .step::after { display: none; }
+      .hero-trust { gap: 2rem; }
+      .banner-stats { gap: 2.5rem; }
+    }
+
+    @media (max-width: 500px) {
+      .process-steps { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; }
+      .about-credentials { grid-template-columns: 1fr; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════ NAV ═══════ -->
+  <nav class="nav" id="navbar">
+    <a href="#" class="nav-logo">Dra. Erica</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#areas">Areas de Atuacao</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#faq">Duvidas</a></li>
+      <li><a href="https://wa.me/5531974444311?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="nav-cta" target="_blank" rel="noopener">Fale Comigo</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════ HERO ═══════ -->
+  <section class="hero">
+    <div class="hero-badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      OAB/MG n. XXXXXX &middot; Atendimento em todo Estado de Minas Gerais
+    </div>
+    <h1>Seu direito merece quem luta <em>com experiencia</em></h1>
+    <p class="hero-sub">
+      Advocacia especializada em Direito Trabalhista, do Consumidor e Responsabilidade Civil. Atendimento presencial e online para pessoas fisicas e juridicas em Minas Gerais.
+    </p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/5531974444311?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="btn-primary btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar Consulta
+      </a>
+      <a href="#areas" class="btn-secondary">Conhecer Areas de Atuacao</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <div class="trust-number">8+</div>
+        <div class="trust-label">Areas de<br>atuacao</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">100%</div>
+        <div class="trust-label">Clientes por<br>indicacao</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">Alto</div>
+        <div class="trust-label">Indice de<br>procedencia</div>
+      </div>
+    </div>
+    <a href="#areas" class="scroll-indicator" style="text-decoration:none;color:var(--text-muted);">
+      <span>Saiba mais</span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- ═══════ AREAS DE ATUACAO ═══════ -->
+  <section class="areas" id="areas">
+    <div class="container">
+      <span class="section-label">Especialidades</span>
+      <h2 class="section-title">Areas de atuacao</h2>
+      <p class="section-desc">Atendimento para pessoas fisicas e juridicas, com foco em resultados concretos e acompanhamento proximo em todas as fases do processo.</p>
+
+      <div class="areas-grid">
+        <!-- Trabalhista -->
+        <div class="area-card area-1 fade-in">
+          <div class="area-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A0522D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          </div>
+          <h3>Direito Trabalhista</h3>
+          <p>Reclamacoes trabalhistas e defesa empresarial com experiencia comprovada em audiencias e execucao.</p>
+          <ul>
+            <li>Reclamacoes trabalhistas</li>
+            <li>Defesas trabalhistas (empresas)</li>
+            <li>Adicionais de insalubridade</li>
+            <li>Adicionais de periculosidade</li>
+            <li>Rescisoes e verbas trabalhistas</li>
+          </ul>
+        </div>
+
+        <!-- Consumidor -->
+        <div class="area-card area-2 fade-in">
+          <div class="area-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A5C5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Direito do Consumidor</h3>
+          <p>Defesa dos seus direitos contra praticas abusivas de empresas, bancos e prestadores de servicos.</p>
+          <ul>
+            <li>Cobrancas indevidas</li>
+            <li>Produtos com defeito</li>
+            <li>Negativacao indevida</li>
+            <li>Contratos abusivos</li>
+          </ul>
+        </div>
+
+        <!-- Responsabilidade Civil -->
+        <div class="area-card area-3 fade-in">
+          <div class="area-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3>Responsabilidade Civil e Dano Moral</h3>
+          <p>Reparacao por danos morais e materiais decorrentes de atos ilicitos, negligencia ou abuso.</p>
+          <ul>
+            <li>Dano moral e material</li>
+            <li>Acidentes e negligencia</li>
+            <li>Indenizacoes</li>
+            <li>Reparacao de danos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ DIFERENCIAIS ═══════ -->
+  <section class="differentials" id="diferenciais">
+    <div class="container">
+      <span class="section-label">Por que me escolher</span>
+      <h2 class="section-title">Diferenciais que fazem a diferenca no resultado</h2>
+      <p class="section-desc">Cada caso recebe atencao individual, estrategia sob medida e o comprometimento de quem constroi sua reputacao com resultados.</p>
+
+      <div class="diff-grid">
+        <div class="diff-card fade-in">
+          <span class="diff-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
+          <h4>Alto indice de procedencia</h4>
+          <p>Historico consistente de acoes procedentes quando atuo como autora. Cada caso e estudado com profundidade para maximizar as chances de exito.</p>
+        </div>
+        <div class="diff-card fade-in">
+          <span class="diff-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <h4>Rapidez e agilidade</h4>
+          <p>Processos conduzidos com celeridade em todas as fases. Acompanhamento proximo e respostas rapidas para que voce nunca fique sem informacao.</p>
+        </div>
+        <div class="diff-card fade-in">
+          <span class="diff-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </span>
+          <h4>Experiencia em audiencias</h4>
+          <p>Solida atuacao presencial em audiencias trabalhistas e civeis. Preparo tecnico e postura firme para defender seus interesses.</p>
+        </div>
+        <div class="diff-card fade-in">
+          <span class="diff-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </span>
+          <h4>100% por indicacao</h4>
+          <p>Todos os clientes chegam por recomendacao. A melhor propaganda e o resultado — e quem ja foi atendido confia o suficiente para indicar.</p>
+        </div>
+        <div class="diff-card fade-in">
+          <span class="diff-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </span>
+          <h4>Atendimento presencial e online</h4>
+          <p>Flexibilidade para atender como voce preferir. Presencial para quem valoriza o contato direto, online para quem precisa de praticidade.</p>
+        </div>
+        <div class="diff-card fade-in">
+          <span class="diff-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </span>
+          <h4>Dominio na execucao</h4>
+          <p>Ganhar a acao e so metade do caminho. Atuo com foco na fase de execucao para garantir que o seu direito saia do papel e vire realidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ STATS BANNER ═══════ -->
+  <section class="stats-banner">
+    <h2>Resultados concretos para quem precisa de solucao, nao de promessa</h2>
+    <div class="banner-stats">
+      <div class="banner-stat">
+        <span class="banner-stat-number">8+</span>
+        <span class="banner-stat-label">Especialidades atendidas</span>
+      </div>
+      <div class="banner-stat">
+        <span class="banner-stat-number">100%</span>
+        <span class="banner-stat-label">Captacao por indicacao</span>
+      </div>
+      <div class="banner-stat">
+        <span class="banner-stat-number">MG</span>
+        <span class="banner-stat-label">Atuacao em todo o estado</span>
+      </div>
+      <div class="banner-stat">
+        <span class="banner-stat-number">PF & PJ</span>
+        <span class="banner-stat-label">Pessoa fisica e juridica</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ ABOUT ═══════ -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-label">Quem sou</span>
+          <h2 class="section-title">Dra. Erica — compromisso e resultado</h2>
+          <p>
+            Sou a Dra. Erica, advogada inscrita na OAB/MG, com atuacao focada em Direito Trabalhista, Direito do Consumidor e Responsabilidade Civil. Minha pratica e construida sobre experiencia real em audiencias, execucoes e resultados mensuraveis.
+          </p>
+          <p>
+            Atendo pessoas fisicas e juridicas em todo o Estado de Minas Gerais, com preferencia pelo atendimento presencial — porque acredito que olhar nos olhos do cliente e o primeiro passo para uma boa defesa.
+          </p>
+          <p>
+            Minha carteira de clientes foi construida inteiramente por indicacao. Isso nao e apenas um dado — e a prova de que quem foi atendido confia no meu trabalho.
+          </p>
+
+          <div class="quote-box">
+            <p>"Direito nao se promete — se conquista. E meu compromisso e lutar por cada resultado."</p>
+          </div>
+        </div>
+
+        <div class="about-photo-area">
+          <div class="about-photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="about-credentials">
+            <div class="credential">
+              <div class="credential-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <strong>OAB/MG</strong>
+              <span>n. XXXXXX</span>
+            </div>
+            <div class="credential">
+              <div class="credential-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <strong>Minas Gerais</strong>
+              <span>Todo o estado</span>
+            </div>
+            <div class="credential">
+              <div class="credential-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <strong>Presencial & Online</strong>
+              <span>Voce escolhe</span>
+            </div>
+            <div class="credential">
+              <div class="credential-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <strong>PF & PJ</strong>
+              <span>Fisica e juridica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ COMO FUNCIONA ═══════ -->
+  <section class="process">
+    <div class="container">
+      <span class="section-label">Como funciona</span>
+      <h2 class="section-title">Do primeiro contato ao resultado</h2>
+      <p class="section-desc">Um processo claro e transparente para voce saber exatamente o que esperar em cada etapa.</p>
+
+      <div class="process-steps">
+        <div class="step fade-in">
+          <div class="step-number">1</div>
+          <h4>Contato inicial</h4>
+          <p>Envie uma mensagem pelo WhatsApp com um breve resumo do seu caso. Responderei em ate 24 horas.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">2</div>
+          <h4>Analise do caso</h4>
+          <p>Reuniao presencial ou online para entender os detalhes, analisar documentos e avaliar a viabilidade juridica.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">3</div>
+          <h4>Estrategia e acao</h4>
+          <p>Definicao da melhor estrategia para o seu caso, com transparencia sobre prazos, custos e expectativas.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">4</div>
+          <h4>Acompanhamento</h4>
+          <p>Atuacao firme em todas as fases — da peticao inicial ate a execucao. Voce sempre informado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ COBERTURA ═══════ -->
+  <section class="coverage">
+    <div class="container">
+      <div class="coverage-grid">
+        <div class="coverage-text">
+          <span class="section-label">Atendimento</span>
+          <h2 class="section-title" style="color:var(--cream);">Atuacao em todo o Estado de Minas Gerais</h2>
+          <p>
+            Atendo demandas trabalhistas, consumeristas e civeis em todas as comarcas de Minas Gerais, tanto presencialmente quanto por meio de ferramentas digitais.
+          </p>
+          <p>
+            Para reclamacoes trabalhistas e audiencias, <strong style="color:var(--terra-glow);">priorizo o atendimento presencial</strong> — porque a presenca faz diferenca no resultado.
+          </p>
+        </div>
+        <ul class="coverage-features">
+          <li><span class="check">&#10003;</span> Reclamacoes trabalhistas e defesas empresariais</li>
+          <li><span class="check">&#10003;</span> Adicionais de insalubridade e periculosidade</li>
+          <li><span class="check">&#10003;</span> Direito do consumidor</li>
+          <li><span class="check">&#10003;</span> Responsabilidade civil e dano moral</li>
+          <li><span class="check">&#10003;</span> Atendimento presencial e online</li>
+          <li><span class="check">&#10003;</span> Pessoas fisicas e juridicas</li>
+          <li><span class="check">&#10003;</span> Todas as comarcas de Minas Gerais</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ FAQ ═══════ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <span class="section-label">Duvidas frequentes</span>
+      <h2 class="section-title">Perguntas que recebo com frequencia</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Quanto custa uma consulta inicial?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Os valores sao combinados diretamente e variam conforme a complexidade do caso. Entre em contato pelo WhatsApp para que eu possa avaliar a sua situacao e informar os custos com transparencia.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Voce atende em qual regiao?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Atuo em todo o Estado de Minas Gerais, em todas as comarcas. Ofereco atendimento presencial e online, priorizando o presencial para audiencias e casos que exigem maior proximidade.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Voce atende empresas?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. Atendo tanto pessoas fisicas quanto juridicas. Para empresas, atuo principalmente em defesas trabalhistas, orientacao preventiva e consultoria em questoes de responsabilidade civil.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Como funciona o atendimento online?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Reunioes por videochamada, envio de documentos por plataformas seguras e acompanhamento por WhatsApp. Todo o processo e conduzido com a mesma qualidade do atendimento presencial.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quais areas voce NAO atende?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Nao atuo nas areas de Direito Criminal e Direito Tributario. Caso precise de orientacao nessas areas, posso indicar colegas de confianca.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quanto tempo demora um processo trabalhista?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Cada caso tem suas particularidades. Em geral, processos trabalhistas no TRT de Minas Gerais podem variar de alguns meses a alguns anos. Trabalho com foco em celeridade em todas as fases, especialmente na execucao.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ CTA ═══════ -->
+  <section class="cta-section">
+    <h2>Precisa de orientacao <em>juridica</em>?</h2>
+    <p>
+      Entre em contato pelo WhatsApp e conte o seu caso. Primeira conversa sem compromisso — para que voce saiba exatamente como posso ajudar.
+    </p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/5531974444311?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="btn-primary btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chamar no WhatsApp
+      </a>
+    </div>
+    <p class="cta-info">
+      (31) 97444-4311 &middot; Atendimento em todo o Estado de Minas Gerais
+    </p>
+  </section>
+
+  <!-- ═══════ WHATSAPP FLOAT ═══════ -->
+  <a href="https://wa.me/5531974444311?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer>
+    <div class="footer-logo">Dra. Erica</div>
+    <p>Direito Trabalhista &middot; Consumidor &middot; Responsabilidade Civil</p>
+    <p style="margin-top:0.5rem;">Atendimento em todo o Estado de Minas Gerais</p>
+    <p class="footer-oab">OAB/MG n. XXXXXX &middot; Este site nao constitui publicidade irregular nos termos do Codigo de Etica da OAB.</p>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Toggle current
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Fade-in on scroll (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
